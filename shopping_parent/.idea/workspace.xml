@@ -42,7 +42,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.tabs" />
+    <property name="settings.editor.selected.configurable" value="preferences.general" />
   </component>
   <component name="RunManager" selected="Maven.shopping_action_admin">
     <configuration name="shopping_action_admin" type="MavenRunConfiguration" factoryName="Maven">
@@ -112,7 +112,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1591168907202</updated>
-      <workItem from="1591168909121" duration="6229000" />
+      <workItem from="1591168909121" duration="11079000" />
+      <workItem from="1591233695580" duration="190000" />
+      <workItem from="1591234310432" duration="70000" />
     </task>
     <servers />
   </component>
@@ -124,29 +126,29 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="121" y="38" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1591177223998" />
-    <state width="1323" height="173" key="GridCell.Tab.0.bottom" timestamp="1591176654584">
+    <state width="1002" height="87" key="GridCell.Tab.0.bottom" timestamp="1591186949727">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="173" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1591176654584" />
-    <state width="1323" height="173" key="GridCell.Tab.0.center" timestamp="1591176654584">
+    <state width="1002" height="87" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1591186949727" />
+    <state width="1002" height="87" key="GridCell.Tab.0.center" timestamp="1591186949727">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="173" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1591176654584" />
-    <state width="1323" height="173" key="GridCell.Tab.0.left" timestamp="1591176654584">
+    <state width="1002" height="87" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1591186949727" />
+    <state width="1002" height="87" key="GridCell.Tab.0.left" timestamp="1591186949727">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="173" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1591176654584" />
-    <state width="1323" height="173" key="GridCell.Tab.0.right" timestamp="1591176654584">
+    <state width="1002" height="87" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1591186949727" />
+    <state width="1002" height="87" key="GridCell.Tab.0.right" timestamp="1591186949727">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="173" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1591176654584" />
-    <state x="163" y="0" key="SettingsEditor" timestamp="1591178668280">
+    <state width="1002" height="87" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1591186949727" />
+    <state x="163" y="0" key="SettingsEditor" timestamp="1591182452137">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="163" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1591178668280" />
-    <state x="57" y="65" key="new project wizard" timestamp="1591176604806">
+    <state x="163" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1591182452137" />
+    <state x="115" y="71" key="new project wizard" timestamp="1591182587505">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="57" y="65" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1591176604806" />
+    <state x="115" y="71" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1591182587505" />
   </component>
 </project>
