@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>shopping_parent</artifactId>
-        <groupId>org.example</groupId>
+        <groupId>com.zying.shopping_parent</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -27,10 +27,40 @@
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.zying.shopping_parent</groupId>
+            <artifactId>shopping_service</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <!--从父项目中导入-->
+        <!--  ==================================================  -->
+        <!--  JavaWeb项目基本jar 共4个 -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jsp-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>taglibs</groupId>
+            <artifactId>standard</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>jstl</groupId>
+            <artifactId>jstl</artifactId>
+        </dependency>
+        <!--  ==================================================  -->
+        <!--  SpringMVC依赖共1个 -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
-        <!--        开始配置运行服务器-->
+        <!--来说配置运行服务器-->
         <plugins>
             <plugin>
                 <groupId>org.apache.tomcat.maven</groupId>
@@ -40,6 +70,7 @@
                     <port>8082</port>
                 </configuration>
             </plugin>
+
         </plugins>
     </build>
 </project>

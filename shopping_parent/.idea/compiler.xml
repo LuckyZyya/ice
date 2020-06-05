@@ -6,12 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="shopping_dao" />
-        <module name="shopping_action_web" />
-        <module name="shopping_service" />
-        <module name="shopping_domain" />
         <module name="shopping_action_admin" />
+        <module name="shopping_action_web" />
         <module name="shopping_common" />
+        <module name="shopping_dao" />
+        <module name="shopping_domain" />
+        <module name="shopping_service" />
       </profile>
     </annotationProcessing>
   </component>

@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>shopping_parent</artifactId>
-        <groupId>org.example</groupId>
+        <groupId>com.zying.shopping_parent</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -30,7 +30,7 @@
     </dependencies>
 
     <build>
-<!--        开始配置运行服务器-->
+        <!--开始配置运行服务器-->
         <plugins>
             <plugin>
                 <groupId>org.apache.tomcat.maven</groupId>
@@ -40,6 +40,7 @@
                     <port>8081</port>
                 </configuration>
             </plugin>
+
         </plugins>
     </build>
 </project>

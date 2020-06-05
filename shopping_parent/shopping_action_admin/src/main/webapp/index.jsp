@@ -1,11 +1,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8"/>
-    <title>在线商城</title>
-</head>
 <body>
-
+<%--这个拿到的pom.xml里面配置的/shopping--%>
+<jsp:forward page="${pageContext.request.contextPath}/showLogin"></jsp:forward>
 </body>
 </html>
