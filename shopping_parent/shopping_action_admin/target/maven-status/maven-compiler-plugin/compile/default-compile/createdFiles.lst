@@ -1,0 +1,5 @@
+com\zying\shopping_parent\controller\AdminProductType.class
+com\zying\shopping_parent\controller\AdminProductManager.class
+com\zying\shopping_parent\controller\AdminSystemLogin.class
+com\zying\shopping_parent\controller\AdminCustomerManager.class
+com\zying\shopping_parent\controller\AdminSystemerManager.class

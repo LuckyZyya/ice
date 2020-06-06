@@ -27,7 +27,7 @@
         </div>
         <div class="panel-body">
             <!-- login form start -->
-            <form action="main.html" class="form-horizontal" method="post">
+            <form action="${pageContext.request.contextPath}/admin/sysLogin" class="form-horizontal" method="post">
                 <div class="form-group">
                     <label class="col-sm-3 control-label">用户名：</label>
                     <div class="col-sm-9">
@@ -58,7 +58,7 @@
                     </div>
                     <div class="col-sm-9 padding-left-0">
                         <div class="col-sm-4">
-                            <button type="submit" class="btn btn-primary btn-block">登&nbsp;&nbsp;陆</button>
+                            <button type="submit" class="btn btn-primary btn-block">登&nbsp;&nbsp;录</button>
                         </div>
                         <div class="col-sm-4">
                             <button type="reset" class="btn btn-primary btn-block">重&nbsp;&nbsp;置</button>
