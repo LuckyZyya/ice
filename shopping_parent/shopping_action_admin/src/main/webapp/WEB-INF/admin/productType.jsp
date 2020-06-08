@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: Lenovo
@@ -40,26 +41,41 @@
                 </tr>
                 </thead>
                 <tbody id="tb">
-                <tr>
-                    <td>1</td>
-                    <td>aaaa</td>
-                    <td>启用</td>
-                    <td class="text-center">
-                        <input type="button" class="btn btn-warning btn-sm doProTypeModify" value="修改">
-                        <input type="button" class="btn btn-warning btn-sm doProTypeDelete" value="删除">
-                        <input type="button" class="btn btn-danger btn-sm doProTypeDisable" value="禁用">
-                    </td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>aaaa</td>
-                    <td>启用</td>
-                    <td class="text-center">
-                        <input type="button" class="btn btn-warning btn-sm doProTypeModify" value="修改">
-                        <input type="button" class="btn btn-warning btn-sm doProTypeDelete" value="删除">
-                        <input type="button" class="btn btn-success btn-sm doProDisable" value="启用">
-                    </td>
-                </tr>
+                <c:forEach items="${productTypes}" var="productType">
+                    <tr>
+                        <td>${productType.id}</td>
+                        <td>${productType.name}</td>
+                        <td>
+                            <c:if test="${productType.status == 1}">启用</c:if>
+                            <c:if test="${productType.status == 0}">禁用</c:if>
+                        </td>
+                        <td class="text-center">
+                            <input type="button" class="btn btn-warning btn-sm doProTypeModify" value="修改">
+                            <input type="button" class="btn btn-warning btn-sm doProTypeDelete" value="删除">
+                            <input type="button" class="btn btn-danger btn-sm doProTypeDisable" value="禁用">
+                        </td>
+                    </tr>
+                </c:forEach>
+                <%--<tr>--%>
+                    <%--<td>1</td>--%>
+                    <%--<td>aaaa</td>--%>
+                    <%--<td>启用</td>--%>
+                    <%--<td class="text-center">--%>
+                        <%--<input type="button" class="btn btn-warning btn-sm doProTypeModify" value="修改">--%>
+                        <%--<input type="button" class="btn btn-warning btn-sm doProTypeDelete" value="删除">--%>
+                        <%--<input type="button" class="btn btn-danger btn-sm doProTypeDisable" value="禁用">--%>
+                    <%--</td>--%>
+                <%--</tr>--%>
+                <%--<tr>--%>
+                    <%--<td>1</td>--%>
+                    <%--<td>aaaa</td>--%>
+                    <%--<td>启用</td>--%>
+                    <%--<td class="text-center">--%>
+                        <%--<input type="button" class="btn btn-warning btn-sm doProTypeModify" value="修改">--%>
+                        <%--<input type="button" class="btn btn-warning btn-sm doProTypeDelete" value="删除">--%>
+                        <%--<input type="button" class="btn btn-success btn-sm doProDisable" value="启用">--%>
+                    <%--</td>--%>
+                <%--</tr>--%>
                 </tbody>
             </table>
         </div>
