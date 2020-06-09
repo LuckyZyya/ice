@@ -1,7 +1,0 @@
-0:0:0:0:0:0:0:1 - - [04/Jun/2020:22:46:46 +0800] "GET /shopping/ HTTP/1.1" 200 3442 http-bio-8082-exec-1 2070
-0:0:0:0:0:0:0:1 - - [04/Jun/2020:22:46:46 +0800] "GET /images/image.jpg HTTP/1.1" 404 - http-bio-8082-exec-3 0
-0:0:0:0:0:0:0:1 - - [04/Jun/2020:22:46:46 +0800] "GET /shopping/js/bootstrap.min.js HTTP/1.1" 200 37051 http-bio-8082-exec-2 20
-0:0:0:0:0:0:0:1 - - [04/Jun/2020:22:46:46 +0800] "GET /shopping/js/jquery.min.js HTTP/1.1" 200 95997 http-bio-8082-exec-6 30
-0:0:0:0:0:0:0:1 - - [04/Jun/2020:22:46:46 +0800] "GET /shopping/css/mycss.css HTTP/1.1" 200 1573 http-bio-8082-exec-5 30
-0:0:0:0:0:0:0:1 - - [04/Jun/2020:22:46:46 +0800] "GET /shopping/css/bootstrap.min.css HTTP/1.1" 200 121205 http-bio-8082-exec-4 30
-0:0:0:0:0:0:0:1 - - [04/Jun/2020:22:46:46 +0800] "GET /shopping/images/backimage.jpg HTTP/1.1" 200 203417 http-bio-8082-exec-4 0
