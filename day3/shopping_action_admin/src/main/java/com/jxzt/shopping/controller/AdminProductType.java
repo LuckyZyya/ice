@@ -6,11 +6,14 @@ import com.github.pagehelper.PageInfo;
 import com.jxzt.shopping.bean.ProductType;
 
 import com.jxzt.shopping.service.IProductTypeService;
+import com.jxzt.shopping.utils.MessageProductType;
+import com.jxzt.shopping.utils.ProductTypeException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.ObjectUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
 
@@ -48,7 +51,27 @@ pageInfo.getPageNum();//获取当前页面
         return "productType";
     }
     @RequestMapping("/add")
-    public  void  addProductTypeData(String name){
+    @ResponseBody //响应浏览器
+    public  MessageProductType  addProductTypeData(String name,String status){
+        MessageProductType messageProductType=new MessageProductType();
 System.out.println("============="+name);
+//开始添加功能 json数据格式 将其封装
+        int statu=0;
+        if (status!=""){
+            statu=Integer.parseInt(status);
+        }
+
+        try {
+            productTypeService.addProductType(name,statu);
+            messageProductType.setSta(1);
+            messageProductType.setMsg("成功");
+        } catch (ProductTypeException e) {
+            messageProductType.setSta(0);
+            messageProductType.setMsg(e.getMessage());
+            //e.printStackTrace();
+        }
+
+
+return  messageProductType;
     }
 }

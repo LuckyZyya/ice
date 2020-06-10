@@ -59,7 +59,9 @@
                     //向控制层提交的操作
                     type:"POST",//提交方式post/get
                     url:"${pageContext.request.contextPath}/productType/add",//请求地址
-                    data:{"name":$("#productTypeName").val().toString().trim()},//请求数据
+                    data:{"name":$("#productTypeName").val().toString().trim(),
+                    "status":$("#productTypeStatus").val().toString().trim()
+                    },//请求数据
                     async:true,//异步提交方式
                     //controller返回信息
                     dataType:"JSON",
@@ -67,6 +69,14 @@
                     success:function (result,textStatus) {
                         //result可能是xmlDoc、jsonObj、html、text等等
                         //this;  //调用本次ajax请求时传递的options参数
+                        // window.alert(result.msg);
+                        if(result.sta === 1){
+                            window.alert(result.msg);
+                            window.location.href="${pageContext.request.contextPath}/productType/findAll?pageNumber=${pageInfo.pages}";
+
+                        }else if(result.sta === 0) {
+                            window.alert(result.msg);
+                        }
                     },
                     error:function (XMLHttpRequest, textStatus, errorThrown) {
                         //XMLHttpRequest:即XMLHttpRequest对象

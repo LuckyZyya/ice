@@ -14,5 +14,18 @@
     <select id="findProductTypeAll" resultType="com.jxzt.shopping.bean.ProductType" parameterType="java.util.List" >
         select  <include refid="productTypeColumn" />  from tb_product_type
     </select>
+    <!-- 根据商品名称来查询 -->
+    <select id="findByProductTypeName" resultType="com.jxzt.shopping.bean.ProductType">
+        select  <include refid="productTypeColumn" />  from tb_product_type
+        where name=#{name}
+    </select>
 
+    <!-- 添加数据
+        useGeneratedKeys="true"主键自动增长
+        keyColumn="id"：主键是id
+     -->
+    <insert id="addProductType" useGeneratedKeys="true" keyColumn="id">
+        insert into  tb_product_type(name,status)
+        values(#{name},#{statu})
+    </insert>
 </mapper>
