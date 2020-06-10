@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jxzt.shopping.dao.IProductTypeDao">
+    <!-- 1.声明一张表的字段 -->
+    <sql id="productTypeColumn">
+        id,name,status
+    </sql>
+    <!-- 查询
+        id:表示是方法名
+        resultType：返回查询表中数据类型
+        parameterType：方法返回数类型类型
+    -->
+    <select id="findProductTypeAll" resultType="com.jxzt.shopping.bean.ProductType" parameterType="java.util.List" >
+        select  <include refid="productTypeColumn" />  from tb_product_type
+    </select>
+
+</mapper>
