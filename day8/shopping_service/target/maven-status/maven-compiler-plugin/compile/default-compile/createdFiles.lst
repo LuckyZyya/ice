@@ -1,0 +1,9 @@
+com\jxzt\shopping\service\ILoginService.class
+com\jxzt\shopping\service\impl\ProductService.class
+com\jxzt\shopping\service\impl\LoginService.class
+com\jxzt\shopping\service\IProductTypeService.class
+com\jxzt\shopping\service\IProductService.class
+com\jxzt\shopping\service\impl\CustomerService.class
+com\jxzt\shopping\service\impl\ProductTypeService.class
+com\jxzt\shopping\service\ICustomerService.class
+com\jxzt\shopping\Hello.class

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jxzt.shopping.dao.ICustomerDao">
+
+    <sql id="CustomerColumn">
+         id,NAME,login_name,PASSWORD,phone,address,is_valid,regist_date
+    </sql>
+
+    <select id="findCustomerAll"  resultType="com.jxzt.shopping.bean.Customer">
+        select <include refid="CustomerColumn"></include> from tb_customer
+    </select>
+
+    <!--    根据用户id查询类型数据进行修改用户信息操作-->
+    <select id="updateFindShow" resultType="com.jxzt.shopping.bean.Customer">
+        select
+        <include refid="CustomerColumn"/>
+        from tb_customer where id=#{id}
+    </select>
+
+    <!--    修改customer-->
+    <update id="modifyCustomerInfo">
+        update tb_customer set name=#{name},login_name=#{login_name},phone=#{phone},address=#{address} where id=#{id}
+    </update>
+
+    <!--    修改用户状态（启用/禁用）-->
+    <update id="changeCustomerState">
+        update tb_customer set is_valid=#{is_valid} where id=#{id}
+    </update>
+
+    <!--    根据name判断是否存在-->
+    <select id="findCustomerByName" resultType="com.jxzt.shopping.bean.Customer">
+        select
+        <include refid="CustomerColumn"/>
+        from tb_customer where name=#{name}
+    </select>
+
+    <!--    添加用户数据  useGeneratedKeys主键自动生成  keyColumn:主键为id-->
+    <insert id="addCustomer" useGeneratedKeys="true" keyColumn="id">
+        insert into
+        tb_customer(name,login_name,password,phone,address,is_valid,regist_date) values(#{name},#{login_name},#{password},#{phone},#{address},#{is_valid},now())
+    </insert>
+
+    <!--    根据关键词搜索用户表-->
+    <select id="queryCustomer" resultType="com.jxzt.shopping.bean.Customer" parameterType="java.util.List">
+        select
+        <include refid="CustomerColumn"/>
+        from tb_customer where
+        name like CONCAT(CONCAT('%', #{name}), '%') and
+        login_name like CONCAT(CONCAT('%', #{login_name}), '%') and
+        <if test="phone != null">
+            phone like CONCAT(CONCAT('%', #{phone}), '%') and
+        </if>
+        address like CONCAT(CONCAT('%', #{address}), '%')
+        <if test="is_valid != -1">
+            and is_valid=#{is_valid}
+        </if>
+    </select>
+
+    <!--    删除操作-->
+    <delete id="delCustomer">
+        delete from tb_customer where id=#{id}
+    </delete>
+
+
+
+
+
+
+
+
+
+
+
+
+</mapper>

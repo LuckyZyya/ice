@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jxzt.shopping.dao.IProductDao">
+    <sql id="productColumn">
+         id,NAME,price,info,image,product_type_id,type
+    </sql>
+
+    <!--登录-->
+    <select id="findAllProduct"  resultType="com.jxzt.shopping.bean.Product">
+        select <include refid="productColumn"></include> from tb_product
+    </select>
+
+    <!--查询商品是否存在-->
+    <select id="findProductByName"  resultType="com.jxzt.shopping.bean.Product">
+        select <include refid="productColumn"></include> from tb_product where NAME=#{name}
+    </select>
+    <insert id="addProductType" useGeneratedKeys="true" keyColumn="id">
+        insert into tb_product_type (name,status)
+        values (#{name},#{status})
+
+    </insert>
+
+
+
+    <!--添加商品-->
+    <insert id="addProduct" useGeneratedKeys="true" keyColumn="id">
+        insert  into tb_product(NAME,price,image,type ) values (#{name},#{price},#{image},#{type})
+    </insert>
+
+    <select id="findProductById" resultType="com.jxzt.shopping.bean.Product">
+        select <include refid="productColumn"/> from tb_product where id=#{id}
+    </select>
+
+
+    <!--修改数据-->
+    <update id="updateProduct">
+        update tb_product set name=#{name},price=#{price},type=#{type},image=#{image} where id=#{id}
+    </update>
+
+    <!--删除数据-->
+    <delete id="deleteProductById">
+    delete  from tb_product where id=#{id}
+</delete>
+
+
+</mapper>

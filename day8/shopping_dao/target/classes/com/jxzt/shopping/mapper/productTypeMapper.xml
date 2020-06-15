@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jxzt.shopping.dao.IProductTypeDao">
+    <!-- 1.声明一张表的字段 -->
+    <sql id="productTypeColumn">
+        id,name,status
+    </sql>
+
+
+    <!-- 查询
+        id:表示是方法名
+        resultType：返回查询表中数据类型
+        parameterType：方法返回数类型类型
+    -->
+    <select id="findProductTypeAll" resultType="com.jxzt.shopping.bean.ProductType" parameterType="java.util.List" >
+        select  <include refid="productTypeColumn" />  from tb_product_type
+    </select>
+<!--根据商品名称来查询-->
+    <select id="findByProductTypeName" resultType="com.jxzt.shopping.bean.ProductType">
+      select <include refid="productTypeColumn"/>from tb_product_type where name =#{name}
+    </select>
+    <!--添加数据
+    useGeneratedKeys主键自动增长
+    keyColumn主键
+    -->
+    <insert id="addProductType" useGeneratedKeys="true" keyColumn="id">
+        insert into tb_product_type (name,status)
+        values (#{name},#{status})
+
+    </insert>
+    <!--根据商品id来查询-->
+    <select id="findProductTypeById" resultType="com.jxzt.shopping.bean.ProductType">
+        select <include refid="productTypeColumn"/> from tb_product_type where id=#{id}
+    </select>
+
+
+    <!--修改数据-->
+    <update id="updateProductType">
+        update tb_product_type set name=#{name}
+        where id=#{id}
+    </update>
+
+    <!--删除数据-->
+<delete id="deleteProductTypeById">
+    delete  from tb_product_type where id=#{id}
+</delete>
+
+</mapper>

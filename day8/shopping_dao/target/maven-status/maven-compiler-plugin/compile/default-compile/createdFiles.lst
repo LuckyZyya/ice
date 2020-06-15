@@ -1,0 +1,4 @@
+com\jxzt\shopping\dao\ICustomerDao.class
+com\jxzt\shopping\dao\IProductDao.class
+com\jxzt\shopping\dao\ILoginDao.class
+com\jxzt\shopping\dao\IProductTypeDao.class
